@@ -15,7 +15,55 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+   <scm>
+			<connection>scm:git:https://github.com/Nuwan-Walisundara/TestModule.gitMyJaggeryAp.git</connection>
+		  <tag>HEAD</tag>
+  </scm>
+  
   <build>
     <finalName>MyJaggeryAp</finalName>
+    
+    
+    <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1.1</version>
+                <configuration>
+                      <!-- add war file name that  you wish to have -->
+                    <warName>MyJaggeryAp</warName>
+                    <packagingIncludes>**/*</packagingIncludes>
+                    <!--<packagingExcludes>WEB-INF/classes/WEB-INF/*</packagingExcludes>-->
+                    <webResources>
+                        <resource>
+                            <!-- this is relative to the pom.xml directory -->
+                            <directory>src/</directory>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<useReleaseProfile>false</useReleaseProfile>
+				</configuration>
+			</plugin>
+  		
+            
+        </plugins>
+        
   </build>
+  
+  <distributionManagement>
+	<repository>
+		<id>nexus</id>
+		<name>Nexus Staging Repo</name>
+		<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+
+	</repository>
+</distributionManagement>
+
 </project>
