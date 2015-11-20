@@ -3,7 +3,7 @@
   <groupId>com.mycompany.app</groupId>
   <artifactId>MyJaggeryAp</artifactId>
   <packaging>war</packaging>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
   <name>MyJaggeryAp Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -16,7 +16,7 @@
   </dependencies>
    <scm>
 			<connection>scm:git:https://github.com/Nuwan-Walisundara/MyJaggeryAp.git</connection>
-		  <tag>v1.0</tag>
+		  <tag>HEAD</tag>
   </scm>
   
   <build>
