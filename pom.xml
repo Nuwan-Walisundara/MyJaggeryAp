@@ -16,7 +16,7 @@
     </dependency>
   </dependencies>
    <scm>
-			<connection>scm:git:https://github.com/Nuwan-Walisundara/MyJaggeryAp.git</connection>
+			<connection>scm:git:https://github.com/Nuwan-Walisundara/TestModule.gitMyJaggeryAp.git</connection>
 		  <tag>HEAD</tag>
   </scm>
   
